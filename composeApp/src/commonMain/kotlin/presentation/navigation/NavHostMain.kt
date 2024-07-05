@@ -13,7 +13,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import presentation.screens.HomeScreen
 import presentation.screens.SettingScreen
-import presentation.screens.SplashScreen
+import presentation.screens.splash.SplashScreen
 import presentation.screens.StationScreen
 
 @Composable

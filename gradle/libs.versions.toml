@@ -18,6 +18,14 @@ kotlin = "2.0.0"
 navigationCompose = "2.8.0-alpha02"
 kotlinx-serialization = "1.6.3"
 
+# lifecycleViewmodel
+lifecycleViewmodel = "2.8.3"
+
+# Room
+androidx-room = "2.7.0-alpha04"
+ksp = "2.0.0-1.0.21"
+sqlite = "2.5.0-SNAPSHOT"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -36,9 +44,23 @@ navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-co
 # Kotlinx Serialization
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
+# lifecycleViewmodel
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewmodel" }
+
+# Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "androidx-room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidx-room" }
+sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "androidx-room" }

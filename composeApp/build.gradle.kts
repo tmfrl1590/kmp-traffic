@@ -65,6 +65,9 @@ kotlin {
             implementation(libs.room.runtime)
             implementation(libs.sqlite.bundled)
             implementation(libs.sqlite)
+
+            //dataStore
+            implementation(libs.androidx.data.store.core)
         }
     }
 }

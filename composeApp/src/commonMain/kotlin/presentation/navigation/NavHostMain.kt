@@ -11,15 +11,19 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import data.database.TrafficDatabase
 import presentation.screens.HomeScreen
 import presentation.screens.SettingScreen
 import presentation.screens.splash.SplashScreen
 import presentation.screens.StationScreen
+import presentation.screens.splash.SplashViewModel
 
 @Composable
 fun NavHostMain(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
+    splashViewModel: SplashViewModel,
+    database: TrafficDatabase,
 ) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentScreen = backStackEntry?.destination
@@ -37,7 +41,11 @@ fun NavHostMain(
             startDestination = SplashNav.SPLASH.route
         ){
             composable(route = SplashNav.SPLASH.route){
-                SplashScreen(navController = navController)
+                SplashScreen(
+                    navController = navController,
+                    splashViewModel = splashViewModel,
+                    database = database
+                )
             }
             composable(route = MainNav.HOME.route) {
                 HomeScreen()

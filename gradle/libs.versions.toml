@@ -26,6 +26,9 @@ androidx-room = "2.7.0-alpha04"
 ksp = "2.0.0-1.0.21"
 sqlite = "2.5.0-SNAPSHOT"
 
+# Data Store
+androidx-data-store = "1.1.1"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -52,6 +55,9 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidx-room" }
 sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
 sqlite = { module = "androidx.sqlite:sqlite", version.ref = "sqlite" }
+
+# Data Store
+androidx-data-store-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "androidx-data-store" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
